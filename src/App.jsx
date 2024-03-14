@@ -1,10 +1,14 @@
+import { BrowserRouter as Router } from 'react-router-dom'
 import './App.css'
+import RoutesComponent from './routes/Routes'
 
 function App() {
 
   return (
     <>
-      <h1>exercicio01</h1>
+      <Router>
+        <RoutesComponent />
+      </Router>
     </>
   )
 }
