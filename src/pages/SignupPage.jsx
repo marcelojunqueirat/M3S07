@@ -24,7 +24,7 @@ function SignupPage() {
     <div>
       <h1>Signup</h1>
       <form onSubmit={handleSubmit}>
-        <div className="w-150">
+        <div className="sign">
           <input placeholder="Username" type="text" value={username} onChange={(e) => setUsername(e.target.value)} />
           <input placeholder="Password" type="password" value={password} onChange={(e) => setPassword(e.target.value)} />
           <button type="submit">Signup</button>
