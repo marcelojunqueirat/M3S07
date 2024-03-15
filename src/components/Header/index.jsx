@@ -12,7 +12,7 @@ function HeaderComponent() {
 
     return (
         <div className="header">
-            <h2>Header</h2>
+            <h2>Fake Systems</h2>
             <div className="button-logout">
                 <button onClick={handleLogout}>Logout</button>
             </div>

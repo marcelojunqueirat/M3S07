@@ -5,10 +5,9 @@ function SidebarComponent() {
   return (
     <div className="sidebar">
       <nav style={{ 'display': 'flex', 'flexDirection': 'column' }}>
-        <NavLink>Home</NavLink>
-        <NavLink>Test</NavLink>
-        <NavLink>Test</NavLink>
-        <NavLink>Test</NavLink>
+        <NavLink to="/home">Home</NavLink>
+        <NavLink to="/pharmacies">Pharmacies</NavLink>
+        <NavLink to="/medicines">Medicines</NavLink>
       </nav>
     </div>
   )

@@ -3,6 +3,8 @@ import SigninPage from '../pages/SigninPage';
 import SignupPage from '../pages/SignupPage';
 import HomePage from '../pages/HomePage';
 import { useAuth } from '../context/AuthContext';
+import PharmaciesPage from '../pages/PharmaciesPage';
+import MedicinesPage from '../pages/MedicinesPage';
 
 export default function RoutesComponent() {
   const { isAuthenticated } = useAuth();
@@ -27,6 +29,8 @@ export default function RoutesComponent() {
         <>
           <Route path='/' exact Component={HomePage} />
           <Route path='/home' Component={HomePage} />
+          <Route path='/pharmacies' Component={PharmaciesPage} />
+          <Route path='/medicines' Component={MedicinesPage} />
         </>
 
       ) : (

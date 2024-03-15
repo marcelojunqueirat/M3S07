@@ -15,7 +15,9 @@ function App() {
           <div className="grid-container">
             <HeaderComponent />
             <SidebarComponent />
-            <RoutesComponent />
+            <div className="content">
+              <RoutesComponent />
+            </div>
           </div>
         ) : (
           <RoutesComponent />
