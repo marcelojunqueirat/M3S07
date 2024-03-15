@@ -45,3 +45,7 @@
 .content {  
   grid-area: content;  
 }
+
+.button-logout {
+  margin: 10px;
+}
