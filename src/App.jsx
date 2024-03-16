@@ -4,25 +4,29 @@ import RoutesComponent from './routes/Routes';
 import HeaderComponent from './components/Header';
 import SidebarComponent from './components/Sidebar';
 import { useAuth } from './context/AuthContext.jsx';
+import { useThemeProvider } from './context/ThemeContext.jsx'
+import { GridContainer } from './styles/styles.jsx';
+
 
 function App() {
-  const { isAuthenticated } = useAuth()
+  const { isAuthenticated } = useAuth();
+  const {theme} = useThemeProvider()
 
   return (
     <>
-      <Router>
-        {isAuthenticated ? (
-          <div className="grid-container">
-            <HeaderComponent />
-            <SidebarComponent />
-            <div className="content">
-              <RoutesComponent />
-            </div>
-          </div>
-        ) : (
-          <RoutesComponent />
-        )}
-      </Router>
+        <Router>
+          {isAuthenticated ? (
+            <GridContainer className="grid-container" theme={theme}>
+              <HeaderComponent theme={theme} />
+              <SidebarComponent theme={theme} />
+              <div className="content">
+                <RoutesComponent />
+              </div>
+            </GridContainer>
+          ) : (
+            <RoutesComponent />
+          )}
+        </Router>
     </>
   )
 }
